@@ -21,7 +21,7 @@ public struct Source: Codable {
     /// Information related to the code verification flow. Present if the source is authenticated by a verification code (`flow` is `code_verification`).
     public var codeVerification: StripeSourceCodeVerification?
     /// Time at which the object was created. Measured in seconds since the Unix epoch.
-    public var created: Date
+    public var created: Date?
     /// Three-letter ISO code for the currency associated with the source. This is the currency for which the source will be chargeable once ready. Required for `single_use` sources.
     public var currency: Currency?
     /// The ID of the customer to which this source is attached. This will not be present when the source has not been attached to a customer.
@@ -62,6 +62,13 @@ public struct Source: Codable {
     public var sofort: StripeSourceSofort?
     public var threeDSecure: StripeSourceThreeDSecure?
     public var wechat: StripeSourceWechat?
+
+    public var brand: String?
+    public var country: String?
+    public var exp_month: Int?
+    public var exp_year: Int?
+    public var funding: String?
+    public var last4: String?
 }
 
 public struct StripeSourceCodeVerification: Codable {
