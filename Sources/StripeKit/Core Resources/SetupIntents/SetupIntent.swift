@@ -25,6 +25,8 @@ public struct StripeSetupIntent: StripeModel {
     @Expandable<StripeCustomer> public var customer: String?
     /// An arbitrary string attached to the object. Often useful for displaying to users.
     public var description: String?
+
+    @Expandable<StripeSetupAttempt> public var latestAttempt: String?
     /// The error encountered in the previous SetupIntent confirmation.
     public var lastSetupError: StripeError?
     /// Has the value true if the object exists in live mode or the value false if the object exists in test mode.
