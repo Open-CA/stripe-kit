@@ -8,5 +8,5 @@
 
 import Foundation
 
-public protocol StripeModel: Codable {}
-extension Data: StripeModel {}
+public typealias StripeModel = Codable
+//extension Data: StripeModel {}
