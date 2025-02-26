@@ -17,6 +17,8 @@ public struct SetupIntent: Codable {
     @Expandable<Customer> public var customer: String?
     /// An arbitrary string attached to the object. Often useful for displaying to users.
     public var description: String?
+
+    @Expandable<StripeSetupAttempt> public var latestAttempt: String?
     /// The error encountered in the previous SetupIntent confirmation.
     public var lastSetupError: StripeError?
     /// Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
